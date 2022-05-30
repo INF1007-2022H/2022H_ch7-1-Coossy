@@ -13,7 +13,20 @@ def ellipsoïde(a = 1, b = 2, c = 3, masse_volumique = 4): # m = p * V
     return "Le volume est de {:.2f} unité et la masse de {:.2f} unité." .format(volume, masse)
 
 
+def dictionnaire_lambda(phrase = "bonjour, je suis une phrase. je suis compose de beaucoup de lettre. oui oui"):
+    dictionnaire = dict()
+    for char in phrase:
+        dictionnaire[char] = phrase.count(char)
+
+    return (sorted(dictionnaire, key=dictionnaire.__getitem__, reverse = True))
+
+
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
-    print(ellipsoïde())
+    #print(ellipsoïde())
+
+    #print(dictionnaire_lambda())
+    
+    
+    
     pass
